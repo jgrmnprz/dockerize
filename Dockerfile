@@ -8,7 +8,7 @@ ENV GO111MODULE=on
 RUN go mod tidy
 RUN go install
 
-FROM alpine:3.15
+FROM alpine:3.16
 LABEL MAINTAINER="Jason Wilder <mail@jasonwilder.com>"
 
 COPY --from=binary /go/bin/dockerize /usr/local/bin
